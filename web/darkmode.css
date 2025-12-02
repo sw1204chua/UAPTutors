@@ -1,0 +1,1105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 29, 24, 12:08:16 AM
+    Author     : Chace
+*/
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9e5df; 
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Main Colors */
+:root {
+    --primary-color: #F1C31E; 
+    --secondary-color: #d43724; 
+    --accent-color: #fff; 
+    --hover-color: #FF6347; 
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 2rem;
+}
+
+.nav ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+    background-color: var(--hover-color);
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+ .dark-mode .button-container {
+
+        padding: 10px;                    /* Space inside container */
+        border-radius: 10px;              /* Rounded corners */
+        display: flex;
+        justify-content: space-between;   /* Even spacing between buttons */
+        margin-top: 20px;                 /* Space above the container */
+    }
+
+.dark-mode .button-container a {
+        padding: 10px 15px;
+        background-color: #d43724;        /* Button background in light mode */
+        color: white;                   /* Text color in light mode */
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        display: inline-block;
+        transition: background-color 0.3s, color 0.3s;
+    }
+            
+.dark-mode .button-container a:hover {
+    background-color: #8e3b28;    /* Slightly lighter on hover */
+            }
+.dark-mode .nav-button{
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode .container{
+    display:flex;
+}
+.dark-mode .home-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.dark-mode .home-page-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.dark-mode .error-container{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    min-height: 30vh;
+    border-radius: 8px;
+    background: #282828;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.dark-mode .tutor-container{
+    display:flex;
+    justify-content:space-around;
+    width: 100%;
+}
+.dark-mode .filter-container, .dark-mode .listing-container{
+    width: 20%;
+    background: #282828;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative
+}
+.dark-mode .listing-container{
+    margin-right: 75px;
+    width: 25%;
+}
+.dark-mode.results-container{
+    width:60%;
+    min-height:85vh; 
+    align-self: center;
+    width:50%;
+    position:relative;
+}
+.dark-mode .invis-container{
+    width:20%;
+    
+}
+.dark-mode .profile-container,
+.dark-mode .aboutme-container,
+.dark-mode .education-container,
+.dark-mode .skills-container,
+.dark-mode .awards-container,
+.dark-mode .language-container {
+    flex-wrap: wrap;
+    width: 75%;
+    background: #282828;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative
+}
+.dark-mode .profile-container {
+    display: flex;    
+}
+.dark-mode .profile-button{
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    cursor: pointer;
+    background-color: var(--secondary-color); 
+    color: white; 
+    text-decoration: none; 
+    padding: 0.8rem 1.2rem; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    transition: background-color 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    border: none; 
+    display: inline-block; 
+    overflow: hidden; 
+
+}
+.dark-mode .edit-add-buttons{
+    cursor: pointer;
+    background-color: var(--secondary-color); 
+    color: white; 
+    text-decoration: none; 
+    padding: 0.8rem 1.2rem; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    transition: background-color 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    border: none; 
+    display: inline-block; 
+    overflow: hidden; 
+}
+.dark-mode .save-button { 
+    margin-left:45%;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    text-decoration: none; 
+    cursor: pointer;
+    border: none; 
+    display: inline-block; 
+    overflow: hidden; 
+}
+
+.dark-mode .save-button:hover {
+    background-color: var(--hover-color);
+}
+.dark-mode #filter.save-button  { 
+    position: relative;
+}
+
+.dark-mode .profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+.dark-mode .user-profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    transition: filter 0.3s ease;
+}
+.dark-mode .user-profile-pic:hover {
+    filter: brightness(50%); /* Darkens the image */
+    cursor: pointer; /* Indicates it's clickable */
+}
+.dark-mode section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.dark-mode button {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.dark-mode button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Footer */
+.dark-mode footer {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.dark-mode footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.dark-mode footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Registration and Login Form */
+.dark-mode .form-container {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #282828;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .form-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color:white;
+}
+
+.dark-mode .form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode .form-container label {
+    font-size: 20px;
+    color:white;
+    margin-bottom: 0.5rem;
+}
+.dark-mode .form-row { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.dark-mode .form-group { display: flex; flex-direction: column; width: 48%; }
+.dark-mode label { margin-bottom: 5px; font-weight: bold; }
+.dark-mode .form-container input {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #575757;
+    color:white;
+}
+
+
+.dark-mode .form-container input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+.dark-mode .form-container select {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #575757;
+    color:white;
+}
+.dark-mode .form-container button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .form-container button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Link to Registration/Login */
+.dark-mode .form-container .form-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dark-mode .form-container .form-link a {
+    color: #F1C31E;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.dark-mode .form-container .form-link a:hover {
+    color: var(--hover-color);
+}
+.dark-mode .overlay-container {
+    width: 400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--accent-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dark-mode .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.dark-mode .logo { /* for logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dark-mode .logo-img {
+    width: 50px;
+    border-radius: 50px;
+}
+
+.dark-mode .logo-text {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+
+}
+/* Main profile section styles */
+.dark-mode .main-container {
+    flex: 1; /* Allow this section to expand */
+    position: relative;
+}
+
+/* Calendar section styles */
+.dark-mode .calendar-container {
+    width: 600px; 
+    position: relative;
+    margin-right: 75px;
+}
+
+/* Calendar specific styles */
+.dark-mode #calendar {
+    background-color: #282828 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .comment-container {
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 20px; 
+    margin-top: 20px; 
+}
+
+.dark-mode .comment-form {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 20px; 
+}
+
+.dark-mode .comment-form textarea {
+    resize: vertical; 
+    height: 120px; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    margin-bottom: 10px; 
+    font-size: 16px; 
+}
+
+
+.dark-mode .comment-form button {
+    background-color: #007bff;
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+.dark-mode .comment-form button:hover {
+    background-color: #0056b3; 
+}
+
+.dark-mode .comment-list {
+    list-style-type: none; 
+    padding: 3px; 
+}
+
+.dark-mode .comment-item {
+    background-color: #282828;
+    border: 2px solid #e1e1e1; 
+    border-radius: 4px; 
+    padding: 6px; 
+    margin-bottom: 10px; 
+
+}
+.dark-mode .comment-item img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+
+.dark-mode .comment-item p {
+    word-wrap: break-word; 
+    margin: 0; 
+}
+.dark-mode .delete-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.dark-mode input[type="submit"] {
+    padding: 10px 15px; 
+    background-color: red; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+
+.dark-mode input[type="submit"]:hover {
+    background-color: #990000;  
+}
+.dark-mode input[type="button"] {
+    padding: 10px 15px; 
+    background-color: red; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+.dark-mode .star-rating {
+        direction: rtl; 
+        font-size: 2.5em; 
+        margin-right: auto;
+}
+.dark-mode .star-rating input {
+        display: none;
+}
+.dark-mode .star-rating label {
+        color: lightgray;
+        cursor: pointer;
+}
+.dark-mode .star-rating input:checked ~ label {
+        color: gold;
+}
+.dark-mode .star-rating label:hover,
+.dark-mode .star-rating label:hover ~ label {
+        color: gold;
+}
+.dark-mode .validate-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    display: flex;
+    width: 75%;
+    background: #282828;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative
+}
+
+.dark-mode .nav-button{
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color:#d43724 
+        
+}
+
+.dark-mode .nav-button:hover {
+    background-color: #990000 
+}
+
+.dark-mode .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode .search-container input[type="text"] {
+  padding: 10px;
+  width: 570px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  transition: width 0.4s ease-in-out;
+}
+
+
+.dark-mode .search-container button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .search-container button:hover {
+  background-color: #990000;
+}
+
+.dark-mode ul.profile {
+    list-style-type: none;    
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+.dark-mode ul.profile li {
+    color:white;             
+    border-bottom: 1px solid #ccd0d5;   
+    padding: 8px 14px;                
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;        
+}
+
+.dark-mode .modal { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.dark-mode .modal-content { 
+    background-color: #282828; 
+    padding: 20px; 
+    border-radius: 5px; 
+    text-align: center; 
+}
+.dark-mode .modal-content button { 
+    margin: 5px; 
+}
+
+.dark-mode #togC{
+    display:none;
+}
+
+.dark-mode #content{
+    display:block;
+}
+
+.dark-mode #togC:checked + #content{
+    display:none;
+}
+
+
+.dark-mode input::-webkit-outer-spin-button, 
+.dark-mode input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+
+/* Styles for dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color:white;
+}
+
+body.dark-mode a {
+    color:white;
+}
+ /* Button styles */
+.dark-mode .dark-mode-toggle {
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    background-color: #d43724;
+    color:white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dark-mode h1 {
+    color: white;                /* Header remains light */
+}
+
+ /* Dark Mode Styles */
+ 
+ 
+ body.dark-mode .button-container {
+
+        padding: 10px;                 
+        border-radius: 10px;              
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;               
+    }
+ 
+body.dark-mode .button-container a {
+    background-color: #d43724;       
+    color:white;                   
+
+}
+body.dark-mode .button-container a:hover {
+    background-color: #555;        /* Dark mode hover effect */
+    }
+    
+
+
+.fc button .fc-icon {
+    position: relative;
+    top: -.05em;
+    margin: 0 .2em;
+    vertical-align: middle;
+    color: maroon;
+}
+.dark-mode .listing-date{
+
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    width: 200px; 
+    background-color: #575757;
+}
+
+@media (max-width: 1700px) {
+    .dark-mode .search-container input[type="text"] {
+        width: 400px;
+    }
+    .dark-mode .navbar ul {
+    gap: 0.2rem;
+    padding: 0.2rem;
+    }
+}
+@media (max-width: 1440px) {
+    .dark-mode .listing-container {
+        width: 25%;
+        margin-right: 50px;
+    }
+    .dark-mode .calendar-container {
+        width: 25%;
+        margin-right: 50px;
+    }
+    .dark-mode .profile-container, 
+    .dark-mode .aboutme-container,
+    .dark-mode .education-container,
+    .dark-mode .skills-container,
+    .dark-mode .awards-container,
+    .dark-mode .language-container {
+        border-radius: 5px;
+        padding: 12px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 85%;
+    }
+    .dark-mode .navbar ul li a,.dark-mode .navbar ul li p {
+        padding: 0.15rem 0.3rem;
+        white-space: nowrap;
+        display: inline-block; 
+        width: auto; 
+        height: auto; 
+        text-align: center;
+        box-sizing: border-box; 
+    }
+    .dark-mode .search-container input[type="text"] {
+        width: 325px;
+        font-size: 12px;
+    }
+    .dark-mode .search-container button {
+        padding: 8px 20px;
+    }
+    .dark-mode.navbar ul {
+    gap: 0.3rem;
+    padding: 0.3rem;
+    }
+}
+@media (max-width: 1300px) {
+
+    .dark-mode .navbar ul li a,.dark-mode .navbar ul li p {
+        padding: 0.1rem 0.2rem;
+        white-space: nowrap;
+        display: inline-block; 
+        width: auto; 
+        height: auto; 
+        text-align: center;
+        box-sizing: border-box; 
+    }
+    .dark-mode .search-container input[type="text"] {
+        width: 250px;
+        font-size: 12px;
+    }
+    .dark-mode .search-container button {
+        display: none;
+    }
+    .dark-mode .navbar ul {
+    gap: 0.2rem;
+    padding: 0.2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .dark-mode body{
+        flex-direction: row;
+    }
+    .dark-mode .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .dark-mode  .navbar ul {
+        flex-direction: row;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+    }
+    .dark-mode  .navbar ul li {
+      margin-left: 0.1rem;
+    }
+
+    .dark-mode .navbar ul li a, .dark-mode .navbar ul li p {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.4rem;
+      white-space: nowrap;
+      display: inline-block; 
+      width: auto; 
+      height: auto; 
+      text-align: center;
+      box-sizing: border-box; 
+    }
+
+    .dark-mode .container, .dark-mode .home-container, .dark-mode .home-page-container, .dark-mode .error-container, .dark-mode .tutor-container, 
+    .dark-mode .filter-container, .dark-mode .results-container, .dark-mode .profile-container, .dark-mode .validate-container{
+        width: 100%;
+    }
+   .dark-mode .listing-container {
+        font-size: 15px;
+        width: 30%;
+        margin-right: 20px;
+    }
+    .dark-mode .calendar-container {
+        width: 30%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .dark-mode .profile-container, 
+    .dark-mode .aboutme-container,
+    .dark-mode .education-container,
+    .dark-mode .skills-container,
+    .dark-mode .awards-container,
+    .dark-mode .language-container {
+        width: 100%;
+        border-radius: 5px;
+        padding: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        font-size: 75%;
+    }
+    
+    .dark-mode .search-container input[type="text"] {
+      width: 300px;
+      font-size: 12px;
+    }
+
+    .dark-mode .search-container button {
+      display: none;
+    }
+
+    .dark-mode .comment-form textarea {
+        width: 100%;
+    }
+
+    .dark-mode button {
+        font-size: 0.6rem;
+        padding: 0.3rem;
+    }
+
+    .dark-mode .logo {
+        width: 90px;
+    }
+    .dark-mode .edit-add-buttons, .dark-mode .profile-button{
+        padding: 0.5rem 0.8rem; 
+        border-radius: 3px; 
+        font-size: 0.8rem; 
+        display: inline-block; 
+        overflow: hidden; 
+    }
+}
+
+@media (max-width: 900px) {
+    .dark-mode .container{
+        padding: 0.5rem 0.5rem;
+    }
+    .dark-mode .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .dark-mode .navbar ul {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 0.8rem;
+        margin-right: 0.02rem;
+    }
+    
+   .dark-mode .navbar ul li {
+      margin-left: 0.5rem;
+    }
+
+    
+    .dark-mode main {
+        padding: 0.8rem;
+        margin: 0.8rem;
+    }
+    .dark-mode .main-container{  
+        display:flex;
+        flex-direction:column;
+        width: 100%;
+        align-items:center;
+    }
+    .dark-mode .container, .dark-mode .home-container, .dark-mode .home-page-container, .dark-mode .error-container, .dark-mode .tutor-container, 
+    .dark-mode .filter-container, .dark-mode .listing-container, .dark-mode .results-container, .dark-mode .profile-container, .dark-mode .validate-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dark-mode .profile-container, 
+    .dark-mode .aboutme-container,
+    .dark-mode .education-container,
+    .dark-mode .skills-container,
+    .dark-mode .awards-container,
+    .dark-mode .language-container {
+        width: 85%;
+    }
+
+    .dark-mode .button-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .dark-mode .calendar-container, .dark-mode .results-container, .dark-mode .filter-container, .dark-mode .listing-container, .dark-mode .invis-container {
+        width: 100%;
+        margin: 0.8rem 0;
+    }
+
+    .dark-mode .comment-form textarea {
+        width: 100%;
+    }
+
+    .dark-mode .comment-container {
+        padding: 8px;
+    }
+
+    .dark-mode .search-container {
+        flex-direction: row;
+    }
+    .dark-mode .search-container input[type="text"] {
+      width: 400px; /* Further reduce width for smaller screens */
+      font-size: 12px; /* Adjust font size */
+    }
+
+    .dark-mode .form-container {
+        width: 85%;
+    }
+
+    .dark-mode .modal-content {
+        width: 85%;
+    }
+
+    .dark-mode ul.profile {
+        gap: 4px;
+    }
+
+    .dark-mode .logo {
+        width: 90px;
+    }
+    
+    .dark-mode .search-bar {
+    width: 30%;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+    .dark-mode .container{
+        padding: 0.75rem 0.75rem;
+    }
+    .dark-mode .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .dark-mode .navbar ul {
+        flex-direction: row;
+        width: 95%;
+        margin-top: 0.8rem;
+        
+    }
+    
+    .dark-mode .navbar ul li {
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+
+    .dark-mode .navbar ul {
+      padding: 0;
+      margin: 0;
+      gap: 0.2rem;
+    }
+
+    .dark-mode .navbar ul li a, .dark-mode .navbar ul li p {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.2rem;  
+      white-space: nowrap;
+      display: inline-block; 
+      width: auto; 
+      height: auto; 
+      text-align: center;
+      box-sizing: border-box; 
+    }
+
+    .dark-mode .logo-text {
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+
+    }
+    .dark-mode section h2 {
+        font-size: 1.3rem;
+    }
+
+    .dark-mode .profile-pic, .dark-mode .user-profile-pic {
+        width: 70px;
+        height: 70px;
+    }
+
+    .dark-mode .comment-item img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .dark-mode .save-button, .nav-button, input[type="submit"], input[type="button"] {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .dark-mode button {
+        font-size: 0.8rem;
+    }
+
+    .dark-mode .logo {
+        width: 70px;
+    }
+   .dark-mode .search-bar {
+    width: 300px;  
+    padding: 8px;  
+    font-size: 14px;
+    }
+  
+    .dark-mode .search-container input[type="text"] {
+    width: 300px; /* Even smaller width for extra small screens */
+    font-size: 12px; /* Keep font size small */
+    }
+    
+}
